@@ -1,0 +1,17 @@
+﻿namespace WindowsFormsApp1.DTOs
+{
+    public class ChiTietDonThuocDTO
+    {
+        public int MaDonThuoc { get; set; }
+
+        public int MaThuoc { get; set; }
+
+        public int SoLuong { get; set; }
+
+        public string LieuDung { get; set; }
+
+        public string CachDung { get; set; }
+
+        public decimal DonGia { get; set; }
+    }
+}
