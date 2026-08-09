@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace WindowsFormsApp1.Models
 {
@@ -14,7 +14,7 @@ namespace WindowsFormsApp1.Models
 
         public TimeSpan GioKham { get; set; }
 
-        public string TrangThai { get; set; }
+        public int TrangThai { get; set; }
 
         public string LyDoKham { get; set; }
     }

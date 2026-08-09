@@ -1,4 +1,4 @@
-﻿using WindowsFormsApp1.DTOs;
+using WindowsFormsApp1.DTOs;
 using WindowsFormsApp1.Repositories;
 
 namespace WindowsFormsApp1.Controllers
@@ -21,6 +21,14 @@ namespace WindowsFormsApp1.Controllers
                 return null;
 
             return repository.DangNhap(tenDangNhap, matKhau);
+        }
+
+        public bool DangKy(string tenDangNhap, string matKhau, int vaiTro)
+        {
+            if (string.IsNullOrWhiteSpace(tenDangNhap) || string.IsNullOrWhiteSpace(matKhau))
+                return false;
+            
+            return repository.DangKy(tenDangNhap, matKhau, vaiTro);
         }
     }
 }

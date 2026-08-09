@@ -1,8 +1,8 @@
-﻿namespace WindowsFormsApp1.Models
+namespace WindowsFormsApp1.Models
 {
     public class ChiTietDonThuoc
     {
-        public int MaDon { get; set; }
+        public int MaDonThuoc { get; set; }
 
         public int MaThuoc { get; set; }
 

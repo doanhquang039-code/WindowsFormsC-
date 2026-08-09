@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1.DTOs
+namespace WindowsFormsApp1.DTOs
 {
     public class BacSiDTO
     {
@@ -6,7 +6,7 @@
 
         public string HoTen { get; set; }
 
-        public string ChuyenKhoa { get; set; }
+        public int MaChuyenKhoa { get; set; }
 
         public string SoDienThoai { get; set; }
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using WindowsFormsApp1.DTOs;
 
@@ -52,6 +52,32 @@ namespace WindowsFormsApp1.Repositories
             }
 
             return null;
+        }
+
+        public bool DangKy(string tenDangNhap, string matKhau, int vaiTro)
+        {
+            string sql = @"
+                INSERT INTO TaiKhoan (TenDangNhap, MatKhau, VaiTro, TrangThai)
+                VALUES (@TenDangNhap, @MatKhau, @VaiTro, 1)";
+
+            try
+            {
+                using (SqlConnection conn = database.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TenDangNhap", tenDangNhap);
+                    cmd.Parameters.AddWithValue("@MatKhau", matKhau);
+                    cmd.Parameters.AddWithValue("@VaiTro", vaiTro);
+
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch
+            {
+                // Catch unique constraint violation or other errors
+                return false;
+            }
         }
     }
 }

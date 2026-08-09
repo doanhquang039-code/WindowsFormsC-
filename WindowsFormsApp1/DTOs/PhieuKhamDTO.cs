@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace WindowsFormsApp1.DTOs
 {
@@ -7,6 +7,8 @@ namespace WindowsFormsApp1.DTOs
         public int MaPhieuKham { get; set; }
 
         public int MaLichKham { get; set; }
+
+        public int MaBenhNhan { get; set; }
 
         public int MaBacSi { get; set; }
 

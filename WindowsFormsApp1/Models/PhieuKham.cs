@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace WindowsFormsApp1.Models
 {
@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.Models
 
         public string TrieuChung { get; set; }
 
-        public string ChuanDoan { get; set; }
+        public string ChanDoan { get; set; }
 
         public string KetLuan { get; set; }
 

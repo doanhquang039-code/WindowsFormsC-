@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace WindowsFormsApp1.Models
 {
@@ -18,6 +18,6 @@ namespace WindowsFormsApp1.Models
 
         public decimal TongTien { get; set; }
 
-        public string TrangThai { get; set; }
+        public int TrangThai { get; set; }
     }
 }
