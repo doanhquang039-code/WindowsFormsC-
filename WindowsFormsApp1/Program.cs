@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             WindowsFormsApp1.Views.FrmLogin login = new WindowsFormsApp1.Views.FrmLogin();
             if (login.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new WindowsFormsApp1.Views.MainForm());
+                Application.Run(new WindowsFormsApp1.Views.MainForm(login.LoggedInRole));
             }
         }
     }

@@ -7,6 +7,7 @@ namespace WindowsFormsApp1.Views
     public partial class FrmLogin : Form
     {
         private TaiKhoanController taiKhoanController;
+        public WindowsFormsApp1.Enums.VaiTro LoggedInRole { get; private set; }
 
         public FrmLogin()
         {
@@ -29,6 +30,7 @@ namespace WindowsFormsApp1.Views
             if (account != null)
             {
                 MessageBox.Show($"Đăng nhập thành công! Vai trò: {account.VaiTro}");
+                this.LoggedInRole = account.VaiTro;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
